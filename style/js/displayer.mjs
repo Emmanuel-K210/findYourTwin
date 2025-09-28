@@ -1,6 +1,6 @@
 class FundBothGame {
     #container = document.createElement("div");
-    #image_link = "./ressources/images/image_"
+    #image_link = "../../ressources/images/image_"
     #selected = [];
     #bothFund = [];
     #isWinner = false;
