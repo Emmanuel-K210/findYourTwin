@@ -1,0 +1,59 @@
+body{
+    background-color: #739bf1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    width: 400px;
+    height: 400px;
+    background: #fff;
+    padding: 20px;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+}
+
+.card {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+
+.cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+background: url(../../ressources/images/motif_card.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+  cursor: pointer;
+}
+
+.dashbord{
+    width: 500px;
+    justify-content: space-between;
+    display: flex;
+}
+
+.dashbord p {
+    font-size: 1rem;
+    font-family: poppins;
+    font-weight: 600;
+}
