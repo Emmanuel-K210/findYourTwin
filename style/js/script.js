@@ -52,15 +52,13 @@ divGame.addEventListener("click", (e) => {
     }
 });
 
-
+//Gestion du temps
 let time = 0;
-let seconde = 0;
-let minute = 0;
 function startConunter() {
     intervalId ??= setInterval(function () {
         time++;
-        minute = Math.floor(seconde / 60);
-        seconde = time - minute * 60;
+        const minute = Math.floor(time / 60);
+        const seconde = time % 60;
         timeDisplay.innerHTML = format(minute, seconde);
     }, 1000);
 }
@@ -75,6 +73,7 @@ function formatTime(value) {
     return val.length !== 2 ? '0' + val : val;
 }
 
+//Le contenu du dashbord
 function messageScoreDisplay(value) {
     return "Votre score :" + value;
 }
@@ -83,12 +82,14 @@ function messageNumberClick(clickValue) {
     return "Nombre de clique :" + clickValue;
 }
 
+//Au Chargement du Dom 
 window.addEventListener("DOMContentLoaded", (e) => {
     mixedContent();
 })
 
+//Message apres un win...!
 function winner() {
-    alert(`Vous avez gagnée! en ${time} avec ${screen.click} clique  
+    alert(`Vous avez gagnée! en ${format(Math.floor(time / 60), time % 60)} avec ${screen.click} clique  
         \n votre score est de ${screen.score} \n Appuyer sur "Ok" pour réessayer
         `);
     screen.score = 0
@@ -98,4 +99,5 @@ function winner() {
     screen.reset();
     clearInterval(intervalId);
     intervalId = null;
+    time = 0; 
 }
