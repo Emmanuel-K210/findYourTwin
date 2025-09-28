@@ -89,7 +89,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
 
 //Message apres un win...!
 function winner() {
-    alert(`Vous avez gagnée! en ${format(Math.floor(time / 60), time % 60)} avec ${screen.click} clique  
+    alert(`Bien Joué! en ${format(Math.floor(time / 60), time % 60)} avec ${screen.click} clique  
         \n votre score est de ${screen.score} \n Appuyer sur "Ok" pour réessayer
         `);
     screen.score = 0
